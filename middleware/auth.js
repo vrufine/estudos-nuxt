@@ -1,6 +1,7 @@
-export default async function (context) {
-  const usuarioLogado = context.store.getters.obterUsuarioLogado
-  if (!usuarioLogado) {
-    return context.res.redirect('/login')
+export default function ({ store, redirect }) {
+  const { usuario } = store.state.usuarioLogado
+  if (!usuario) {
+    return redirect('/login')
   }
+  return Promise.resolve()
 }
