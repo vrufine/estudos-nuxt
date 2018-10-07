@@ -9,13 +9,14 @@
     />
     <v-toolbar-title>{{ title }}</v-toolbar-title>
     <v-spacer />
-    <v-toolbar-items>
-      <v-btn
-        flat
-      >
-        Link
-      </v-btn>
-    </v-toolbar-items>
+    Olá, {{ usuarioLogado.usuario }}!
+    <v-spacer />
+    <!-- <v-toolbar-items> -->
+    <v-btn
+      flat
+      @click="sair"
+    >Sair</v-btn>
+    <!-- </v-toolbar-items> -->
   </v-toolbar>
 </template>
 
@@ -27,9 +28,24 @@
         default: ''
       }
     },
+    computed: {
+      usuarioLogado () {
+        console.log('TCL: usuarioLogado -> this.$store.getters.obterUsuarioLogado', this.$store.getters.obterUsuarioLogado);
+        return this.$store.getters.obterUsuarioLogado
+      }
+    },
     methods: {
       toggleSidebar () {
         this.$emit('toggleSidebar')
+      },
+      sair () {
+        this.$store.dispatch('fazerLogout')
+          .then(() => {
+            this.$router.push('/login')
+          })
+          .catch(err => {
+            alert(err.message)
+          })
       }
     }
   }
