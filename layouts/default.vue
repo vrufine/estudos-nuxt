@@ -21,6 +21,7 @@
   import Sidebar from './../components/Sidebar'
 
   export default {
+    middleware: 'auth',
     components: {
       navbar: Navbar,
       sidebar: Sidebar
@@ -30,7 +31,6 @@
         title: 'Sistema Life'
       }
     },
-    middleware: 'auth',
     data: () => ({
       showSidebar: false
     }),
