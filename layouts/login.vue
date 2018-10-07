@@ -1,0 +1,19 @@
+<template>
+  <v-app dark>
+    <v-container>
+      <v-layout>
+        <v-flex>
+          <v-card>
+            <v-card-title>Login</v-card-title>
+            <v-card-text>
+              formulário...
+            </v-card-text>
+            <v-card-actions>
+              botoes
+            </v-card-actions>
+          </v-card>
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </v-app>
+</template>
