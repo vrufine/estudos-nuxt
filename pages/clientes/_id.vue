@@ -7,6 +7,11 @@
 
 <script>
   export default {
+    head () {
+      return {
+        title: 'Cliente #' + this.id
+      }
+    },
     computed: {
       id () {
         return this.$route.params.id

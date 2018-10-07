@@ -25,6 +25,11 @@
       navbar: Navbar,
       sidebar: Sidebar
     },
+    head () {
+      return {
+        title: 'Sistema Life'
+      }
+    },
     data: () => ({
       showSidebar: false
     }),
