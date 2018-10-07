@@ -30,6 +30,7 @@
         title: 'Sistema Life'
       }
     },
+    middleware: 'auth',
     data: () => ({
       showSidebar: false
     }),

@@ -30,7 +30,6 @@
     },
     computed: {
       usuarioLogado () {
-        console.log('TCL: usuarioLogado -> this.$store.getters.obterUsuarioLogado', this.$store.getters.obterUsuarioLogado);
         return this.$store.getters.obterUsuarioLogado
       }
     },

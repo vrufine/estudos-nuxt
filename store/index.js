@@ -2,7 +2,7 @@ import Vuex from 'vuex'
 
 const createStore = () => new Vuex.Store({
   state: () => ({
-    usuarioLogado: {}
+    usuarioLogado: false
   }),
   mutations: {
     'SET_USUARIO': (state, usuario) => {
