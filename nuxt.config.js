@@ -1,5 +1,7 @@
 const pkg = require('./package')
 
+const isProduction = () => process.env.NODE_ENV === 'production'
+
 module.exports = {
   mode: 'universal',
 
@@ -50,6 +52,10 @@ module.exports = {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+  },
+  
+  env: {
+    ROOT_API: isProduction() ? 'https://api.sistemalife.com.br/' : 'http://localhost:8080/'
   },
 
   /*
